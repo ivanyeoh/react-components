@@ -1,0 +1,45 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 10;
+  display: flex;
+  align-items: stretch;
+  flex-direction: row;
+  height: 4rem;
+  box-sizing: border-box;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.nav .logo {
+  display: flex;
+  align-items: center;
+}
+
+.nav .menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  margin-left: auto;
+  display: flex;
+  align-items: stretch;
+  flex-direction: row;
+}
+.nav .menu li {
+  display: flex;
+  align-items: stretch;
+}
+.nav .menu a {
+  display: flex;
+  align-items: center;
+}
+
+.nav a {
+  white-space: nowrap;
+  text-decoration: none;
+  padding: 0 20px;
+  color: white;
+}

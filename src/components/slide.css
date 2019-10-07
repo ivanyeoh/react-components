@@ -1,0 +1,54 @@
+.slide {
+  position: fixed;
+  text-align: center;
+  padding-top: 4rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 2rem;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+}
+
+.slide .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+
+  color: white;
+}
+
+.slide .content > h1,
+.slide .content > p {
+  max-width: 650px;
+  z-index: 2;
+}
+
+.slide .background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+
+.slide .mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) );
+}
