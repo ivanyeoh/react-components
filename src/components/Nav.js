@@ -1,19 +1,17 @@
-export default ({ logo }) => {
+export default ({ logo, items = [] }) => {
   return (
     <nav className="nav">
       <a href="/" className="logo">
-        GOODWINDS
+        {logo}
       </a>
       <ul className="menu">
-        <li>
-          <a href="/works">Our Works</a>
-        </li>
-        <li>
-          <a href="/about">About Us</a>
-        </li>
-        <li>
-          <a href="/contact">Contact Us</a>
-        </li>
+        {
+          items.map((item, index) => (
+            <li key={`nav-item-${index}`} className={location.pathname === item.url ? "active" : null}>
+              <a href={item.url}>{item.label}</a>
+            </li>
+          ))
+        }
       </ul>
     </nav>
   )

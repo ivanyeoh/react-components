@@ -3,19 +3,18 @@
   top: 0;
   left: 0;
   width: 100vw;
-  z-index: 10;
+  z-index: 50;
   display: flex;
   align-items: stretch;
   flex-direction: row;
-  height: 4rem;
+  height: 7rem;
   box-sizing: border-box;
-  padding-left: 2rem;
-  padding-right: 2rem;
 }
 
 .nav .logo {
   display: flex;
   align-items: center;
+  padding-left: 0;
 }
 
 .nav .menu {
@@ -31,15 +30,40 @@
 .nav .menu li {
   display: flex;
   align-items: stretch;
+  position: relative;
 }
 .nav .menu a {
   display: flex;
   align-items: center;
 }
+.nav .menu li:before {
+  position: absolute;
+  content: "";
+  bottom: 35%;
+  width: 0;
+  height: 1px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: transparent;
+  transition: background-color .4s ease, width .4s ease;
+}
+.nav .menu li.active:before {
+  background-color: #75c8ce;
+  width: 30%;
+}
+.nav .menu li.active a,
+.nav .menu li.active a:hover {
+  color: #75c8ce;
+}
+
+.nav .menu a:hover {
+  color: rgba(255, 255, 255, 1);
+}
 
 .nav a {
   white-space: nowrap;
   text-decoration: none;
-  padding: 0 20px;
-  color: white;
+  padding: 0 1rem;
+  color: rgba(255, 255, 255, .8);
+  transition: color .4s ease;
 }

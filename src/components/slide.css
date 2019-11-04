@@ -1,54 +1,178 @@
-.slide {
-  position: fixed;
-  text-align: center;
-  padding-top: 4rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  padding-bottom: 2rem;
-  box-sizing: border-box;
-  width: 100vw;
-  height: 100vh;
+.slides {
+  position: relative;
 }
 
-.slide .content {
+.slides, .slide, .slide .background, .slide .mask {
   position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
+}
+
+.slides .pagination {
+  position: absolute;
+  bottom: 2rem;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.slide {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  z-index: 100;
-
-  color: white;
+  z-index: 0;
 }
 
-.slide .content > h1,
-.slide .content > p {
+.slide:target,
+.slide.active {
+  z-index: 10;
+}
+
+.slide .content {
+  color: white;
   max-width: 650px;
-  z-index: 2;
+  z-index: 30;
+  text-align: center;
+}
+.slide .content h1 {
+  margin-top: 0;
+}
+.slide .content p:last-of-type {
+  margin-bottom: 0;
 }
 
 .slide .background {
-  position: absolute;
-  top: 0;
-  left: 0;
   background-size: cover;
   background-position: 50%;
   background-repeat: no-repeat;
-  width: 100vw;
-  height: 100vh;
-  z-index: 1;
+  z-index: 10;
 }
 
 .slide .mask {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 1;
-  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) );
+  z-index: 20;
+}
+
+.slides .pagination {
+  z-index: 20;
+}
+
+.slides .pagination a {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.2rem;
+  padding: 0;
+  margin: 0 0.2rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid transparent;
+}
+
+.slides .pagination .active {
+  border: 1px solid white;
+  color: rgba(255, 255, 255, 1);
+  border-radius: 50%;
+}
+
+
+/* Animations */
+.slide h1 {
+  animation: fadeOutUp .5s ease-in;
+}
+.slide p {
+  animation: fadeOutDown .5s ease-in;
+}
+.slide.active h1 {
+  animation: fadeInDown .5s ease-in;
+}
+.slide.active p {
+  animation: fadeInUp .5s ease-in;
+}
+.slide.active .background {
+  backface-visibility: hidden;
+  animation: backgroundZoomAnimation 36s linear infinite 0s;
+}
+.slide.active .mask {
+  animation: backgroundDimAnimation 36s ease forwards;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0,100%,0)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateZ(0)
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translate3d(0,-100%,0)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateZ(0)
+  }
+}
+
+@keyframes fadeOutUp {
+  0% {
+    opacity: 1;
+    transform: translateZ(0)
+  }
+
+  to {
+    opacity: 0;
+    transform: translate3d(0,100%,0)
+  }
+}
+
+@keyframes fadeOutDown {
+  0% {
+    opacity: 1;
+    transform: translateZ(0)
+  }
+
+  to {
+    opacity: 0;
+    transform: translate3d(0,-100%,0)
+  }
+}
+
+@keyframes backgroundZoomAnimation { 
+	0% {
+	    animation-timing-function: ease-in;
+	}
+	12% {
+	    transform: scale(1.05);
+	    animation-timing-function: ease-out;
+	}
+	20% {
+	    transform: scale(1.1);
+	}
+	28% {
+	    transform: scale(1.1);
+	}
+}
+
+@keyframes backgroundDimAnimation {
+  0% {
+    background: rgba(0, 0, 0, .4);
+  }
+  12% {
+    background: rgba(0, 0, 0, .7);
+  }
+  100% {
+    background: rgba(0, 0, 0, .7);
+  }
 }

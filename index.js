@@ -1,5 +1,5 @@
-import Slide from "./src/Slide.js"
+import Slideshow from "./src/Slideshow.js"
 
 export {
-  Slide
+  Slideshow
 }

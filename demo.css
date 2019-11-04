@@ -14,9 +14,19 @@ p {
   font-size: 1.2rem;
 }
 
-.nav a {
+#demo,
+.nav {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+#demo .nav a {
+  font-size: 1.1em;
   font-weight: 500;
 }
-.nav .menu a {
+#demo .nav .menu {
+  margin-right: -1rem;
+}
+#demo .nav .menu a {
   text-transform: lowercase;
 }
