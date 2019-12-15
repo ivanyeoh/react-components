@@ -2,25 +2,32 @@ const { useState, cloneElement, Children, memo } = React
 
 export const Image = ({ title, description, imageUrl, link }) => {
   return (
-    <article className="image-gallery-item">
-      <a href={link}>
-        <img src={imageUrl} className="image" />
-        <div className="caption">
-          <h2>{title}</h2>
-          <p>{description}</p>
+    <a href={link}>
+      <figure>
+        <div className="image">
+          <img src={imageUrl} />
         </div>
-      </a>
-    </article>
+        <figcaption>
+          <strong>{title}</strong>
+          {description}
+        </figcaption>
+      </figure>
+    </a>
   )
 }
 
 export const ImageGallery = ({ children }) => {
   return (
     <section className="image-gallery">
+      <ul>
       {
-        Children.map(children, (child, index) => cloneElement(child, {
-        }))
+        Children.map(children, (child, index) => (
+          <li className="image-gallery-item" key={index}>
+            {cloneElement(child, {})}
+          </li>
+        ))
       }
+      </ul>
     </section>
   )
 }

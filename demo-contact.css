@@ -1,0 +1,77 @@
+body {
+  background-color: #101010;
+}
+
+#demo {
+  padding: 0;
+}
+
+.contact {
+  width: 100vw;
+  height: 100vh;
+  padding-top: 120px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  background-image: url('./img/contact2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.contact .modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+.contact .mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, .7);
+  z-index: 10;
+}
+
+.contact .methods {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 1rem;
+}
+.contact .methods a {
+  color:#75c8ce;
+}
+.contact .methods > div {
+  padding: 2rem;
+}
+.contact .methods img {
+  width: 50px;
+  display: block;
+  margin: 0 auto .5rem auto;
+  color: white;
+}
+.contact .methods > div div {
+  margin: .5rem 0;
+}
+.contact .methods > div div img {
+  width: 22px;
+  display: inline-block;
+  margin: 0 10px;
+}
+.contact .phone {
+  white-space: nowrap;
+  text-align: center;
+}
+.contact .email {
+  white-space: nowrap;
+}
+.contact .map {
+  padding: 1rem 2rem 2rem 2rem;
+}

@@ -49,8 +49,8 @@ ReactDOM.render(
   <React.Fragment>
     <Nav logo={<Logo />} items={[
       {url: '/demo-gallery.html', label: 'Our Works'},
-      {url: '/about-us', label: 'About Us'},
-      {url: '/contact-us', label: 'Contact Us'},
+      {url: '/demo-about.html', label: 'About Us'},
+      {url: '/demo-contact.html', label: 'Contact Us'},
     ]} />
 
     <ImageGallery>
