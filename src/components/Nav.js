@@ -12,7 +12,7 @@ const scrollOver = (y, callback) => {
 
 export default ({ logo, items = [] }) => {
   const [over, setOver] = useState(false);
-  const [pathname, setPathname] = useState('pathname');
+  const [pathname, setPathname] = useState(null);
 
   useEffect(() => {
     setPathname(window.location.pathname);
