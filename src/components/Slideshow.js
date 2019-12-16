@@ -1,7 +1,5 @@
-import React from 'react'
+import React, { useState, useEffect, cloneElement, Children, memo } from 'react'
 import { getUrlHash } from '../utils/url.js'
-
-const { useState, cloneElement, Children, memo } = React
 
 const generateChildrenIds = (id, children) => {
   const childrenIds =  []
@@ -26,8 +24,12 @@ export const Slide = ({ id, title, description, cssBackgroundImage, activated })
 
 export const Slideshow = memo(({ id = 'main', children }) => {
   const childrenIds = generateChildrenIds(id, children)
-  const [activeSlideId, setActiveSlide] = useState(getUrlHash() || childrenIds[0])
+  const [activeSlideId, setActiveSlide] = useState(childrenIds[0])
   const activateSlide = id => () => { setActiveSlide(id) }
+
+  useEffect(() => {
+    setActiveSlide(getUrlHash())
+  })
 
   return (
     <section className="slides">
