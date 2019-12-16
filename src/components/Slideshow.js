@@ -28,7 +28,7 @@ export const Slideshow = memo(({ id = 'main', children }) => {
   const activateSlide = id => () => { setActiveSlide(id) }
 
   useEffect(() => {
-    setActiveSlide(getUrlHash())
+    setActiveSlide(getUrlHash() || childrenIds[0])
   })
 
   return (
