@@ -14,15 +14,15 @@ ReactDOM.render(
     <Slideshow>
       <Slideshow.Slide
         title="Welcome to GoodWinds"
-        description="One stop solution provider of interior designs &amp; built services for all business entity and residence"
+        description={<p>One stop solution provider of interior designs &amp; built services for all business entity and residence</p>}
         cssBackgroundImage="url('/img/interior-designs/0.jpg')">
       </Slideshow.Slide>
       <Slideshow.Slide
         title="Welcome to GoodWinds2"
-        description="We are interior design &amp; build company that
+        description={<p>We are interior design &amp; build company that
         provide a comprehensive services from interior design planning, architecture,
         implementation &amp; construction management, and consultancy services to literally
-        almost all sectors that you can imagine which mentioned below"
+        almost all sectors that you can imagine which mentioned below</p>}
         cssBackgroundImage="url('/img/interior-designs/1.jpg')">
       </Slideshow.Slide>
     </Slideshow>
