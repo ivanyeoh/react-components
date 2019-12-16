@@ -3,6 +3,7 @@ article img {
 }
 
 article.dark,
+article.neutral,
 article.bright {
   padding: 2rem;
 }
@@ -14,6 +15,11 @@ article.dark {
 
 article.bright {
   background: rgb(245, 245, 245);
+  color: #101010;
+}
+
+article.neutral {
+  background: rgb(222, 222, 222);
   color: #101010;
 }
 
