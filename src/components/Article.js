@@ -4,7 +4,7 @@ const RightFigureArticle = ({ title, children, figure, figcaption }) => (
   <Fragment>
     <h2>{title}</h2>
     <figure>
-      {figure}
+      {children}
       <figcaption>{figcaption}</figcaption>
     </figure>
 
@@ -37,14 +37,11 @@ const PlainArticle = ({ title, children }) => (
 const renderArticle = (type, props) => {
   switch (type) {
     case 'right-figure':
-      <RightFigureArticle {...props} />
-      break;
+      return <RightFigureArticle {...props} />
     case 'split':
-      <SplitArticle {...props} />
-      break;
+      return <SplitArticle {...props} />
     default:
-      <PlainArticle {...props} />
-      break;
+      return <PlainArticle {...props} />
   }
 }
 
