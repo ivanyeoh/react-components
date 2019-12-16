@@ -8,12 +8,13 @@ const generateChildrenIds = (id, children) => {
   return childrenIds
 }
 
-export const Slide = ({ id, title, description, cssBackgroundImage, activated }) => {
+export const Slide = ({ id, title, description, bottomContent, cssBackgroundImage, activated }) => {
   return (
     <article className={`slide${activated ? ' active' : ''}`} id={id}>
       <div className="content">
         <h1>{title}</h1>
-        <p>{description}</p>
+        {description ? <p>{description}</p> : null}
+        {bottomContent ? bottomContent : null}
       </div>
 
       <div className="background" style={{ backgroundImage: cssBackgroundImage }}></div>
@@ -55,7 +56,7 @@ export const Slideshow = memo(({ id = 'main', children }) => {
         }))
       }
       {
-        childrenIds.length ? <Pagination
+        childrenIds.length > 1 ? <Pagination
           childrenIds={childrenIds}
           activeSlideId={activeSlideId}
           activateSlide={activateSlide}
