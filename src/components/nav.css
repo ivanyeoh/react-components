@@ -135,6 +135,9 @@
   .nav.expanded .menu a {
     line-height: 4rem;
   }
+  .nav.expanded .menu a:hover {
+    color: rgba(0, 0, 0, 0.5);
+  }
   .nav.expanded .menu li.active:before {
     width: 3rem;
   }
