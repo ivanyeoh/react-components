@@ -25,7 +25,7 @@ export default ({ logo, items = [] }) => {
   })
 
   let matchedItem = items.find(item => item.url === pathname)
-  if (!matchedItem) matchedItem = items.find(item => item.url.match(new RegExp(`^${pathname}`)))
+  if (!matchedItem) matchedItem = items.find(item => pathname.match(new RegExp(`^${item.url}`)))
 
   const navItems = items.map((item, index) => {
     return {
