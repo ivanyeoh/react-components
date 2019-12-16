@@ -350,6 +350,10 @@ article.split > div.right {
 }.slides {
   position: relative;
 }
+.slides + .spacer {
+  width: 100vw;
+  height: 100vh;
+}
 
 .slides, .slide, .slide .background, .slide .mask {
   position: absolute;

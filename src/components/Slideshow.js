@@ -51,22 +51,25 @@ export const Slideshow = memo(({ id = 'main', children }) => {
   })
 
   return (
-    <section className="slides">
-      {
-        Children.map(children, (child, index) => cloneElement(child, {
-          id: childrenIds[index],
-          key: childrenIds[index],
-          activated: activeSlideId === childrenIds[index]
-        }))
-      }
-      {
-        childrenIds.length > 1 ? <Pagination
-          childrenIds={childrenIds}
-          activeSlideId={activeSlideId}
-          activateSlide={activateSlide}
-        /> : null
-      }
-    </section>
+    <>
+      <section className="slides">
+        {
+          Children.map(children, (child, index) => cloneElement(child, {
+            id: childrenIds[index],
+            key: childrenIds[index],
+            activated: activeSlideId === childrenIds[index]
+          }))
+        }
+        {
+          childrenIds.length > 1 ? <Pagination
+            childrenIds={childrenIds}
+            activeSlideId={activeSlideId}
+            activateSlide={activateSlide}
+          /> : null
+        }
+      </section>
+      <div className="spacer"></div>
+    </>
   )
 })
 
