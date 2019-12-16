@@ -320,7 +320,7 @@ article.split > div.right {
   margin: 0 auto;
 }
 .scroll-down-arrow.scrolled span {
-  animation: arrowFade 2s;
+  animation: arrowFade 2s both;
 }
 .scroll-down-arrow span{
   display: block;
