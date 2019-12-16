@@ -12,8 +12,11 @@ const scrollOver = (y, callback) => {
 
 export default ({ logo, items = [] }) => {
   const [over, setOver] = useState(false);
+  const [pathname, setPathname] = useState('pathname');
 
   useEffect(() => {
+    setPathname(window.location.pathname);
+
     window.addEventListener('scroll', scrollOver(112, setOver))
 
     return () => {
@@ -29,7 +32,7 @@ export default ({ logo, items = [] }) => {
       <ul className="menu">
         {
           items.map((item, index) => (
-            <li key={`nav-item-${index}`} className={window.location.pathname === item.url ? "active" : null}>
+            <li key={`nav-item-${index}`} className={pathname === item.url ? "active" : null}>
               <a href={item.url}>{item.label}</a>
             </li>
           ))
