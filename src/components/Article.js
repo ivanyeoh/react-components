@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 
-const RightFigureArticle = ({ title, content, figure, figcaption }) => (
+const RightFigureArticle = ({ title, children, figure, figcaption }) => (
   <Fragment>
     <h2>{title}</h2>
     <figure>
@@ -8,15 +8,15 @@ const RightFigureArticle = ({ title, content, figure, figcaption }) => (
       <figcaption>{figcaption}</figcaption>
     </figure>
 
-    {content}
+    {children}
   </Fragment>
 )
 
-const SplitArticle = ({ title, content, figure }) => (
+const SplitArticle = ({ title, children, figure }) => (
   <Fragment>
     <div className="left">
       <h2>{title}</h2>
-      {content}
+      {children}
     </div>
     <div className="right">
       {figure}
@@ -24,11 +24,11 @@ const SplitArticle = ({ title, content, figure }) => (
   </Fragment>
 )
 
-const PlainArticle = ({ title, content }) => (
+const PlainArticle = ({ title, children }) => (
   <Fragment>
     <h2>{title}</h2>
     <div className="content">
-      {content}
+      {children}
     </div>
     <div className="mask"></div>
   </Fragment>
