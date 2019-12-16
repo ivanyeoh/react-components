@@ -319,6 +319,9 @@ article.split > div.right {
   width: 30px;
   margin: 0 auto;
 }
+.scroll-down-arrow.scrolled span {
+  animation: arrowFade 2s;
+}
 .scroll-down-arrow span{
   display: block;
   width: 15px;
@@ -334,6 +337,14 @@ article.split > div.right {
 }
 .scroll-down-arrow span:nth-child(3){
   animation-delay: -0.4s;
+}
+@keyframes arrowFade {
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
 }
 @keyframes arrowPointingDown {
   0%{
