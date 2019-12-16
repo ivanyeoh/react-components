@@ -1,8 +1,10 @@
 import React from 'react'
 
-export default ({ content }) => {
+export default ({ content, backgroundImage }) => {
   return (
-    <div className="hero">
+    <div className="hero" style={{
+      backgroundImage
+    }}>
       <div className="content">
         {content}
       </div>
