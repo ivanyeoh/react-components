@@ -35,3 +35,8 @@ p {
 #demo .nav .menu a {
   text-transform: lowercase;
 }
+
+footer {
+  padding: 2rem;
+  color: rgba(255,255,255, .7);
+}

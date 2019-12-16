@@ -9,6 +9,12 @@
   flex-direction: row;
   height: 7rem;
   box-sizing: border-box;
+
+  transition: background 0.4s;
+}
+
+.nav.over {
+  background-color: #101010;
 }
 
 .nav .logo {
@@ -67,3 +73,4 @@
   color: rgba(255, 255, 255, .8);
   transition: color .4s ease;
 }
+

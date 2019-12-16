@@ -27,7 +27,7 @@ ReactDOM.render(
     } />
 
     <article className="bright">
-      <h2>What we do</h2>
+      <h2>What We Do</h2>
       <ul className="icon-list">
         <li>
           <figure>
@@ -81,7 +81,7 @@ ReactDOM.render(
     </article>
 
     <article className="right-figure">
-      <h2>Background</h2>
+      <h2>Our Background</h2>
       <figure>
         <img src="../img/office.png" />
         <figcaption>Our office</figcaption>
@@ -126,6 +126,10 @@ ReactDOM.render(
         <img src="../img/group-photo.jpg" />
       </div>
     </article>
+
+    <footer>
+      &copy; 2019 GOODWINDS Sdn Bhd
+    </footer>
   </React.Fragment>,
   document.querySelector('#demo')
 )

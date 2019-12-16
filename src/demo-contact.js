@@ -14,7 +14,7 @@ ReactDOM.render(
       <div className="modal">
         <div className="methods">
           <div className="address">
-            <img src="../img/contact/007-map.svg" />
+            <img className="title" src="../img/contact/007-map.svg" />
             <address>
               No. 1B, Level 1, Jalan BK 3/2,
               Bandar Kinrara, 47180 Puchong,
@@ -22,7 +22,7 @@ ReactDOM.render(
             </address>
           </div>
           <div className="phone">
-            <img src="../img/contact/008-conversation.svg" />
+            <img className="title" src="../img/contact/008-conversation.svg" />
             <div>
               <a href="tel:+60123767671">+6012 376 7671</a>
               <br/>
@@ -38,7 +38,7 @@ ReactDOM.render(
               <a title="whatsapp" href="https://api.whatsapp.com/send?text=Hello&phone=60172246227"><img src="../img/contact/010-whatsapp.svg" /></a>            </div>
           </div>
           <div className="email">
-            <img src="../img/contact/009-email.svg" />
+            <img className="title" src="../img/contact/009-email.svg" />
             <a href="mailto:nicholas@goodwinds.com.my">nicholas@goodwinds.com.my</a>
             <br/>
             <a href="mailto:alfred@goodwinds.com.my">alfred@goodwinds.com.my</a>

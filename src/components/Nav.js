@@ -1,6 +1,26 @@
+const scrollOver = (y, callback) => {
+  return (a) => {
+    if (document.documentElement.scrollTop > y) {
+      callback(true)
+    } else {
+      callback(false)
+    }
+  }
+}
+
 export default ({ logo, items = [] }) => {
+  const [over, setOver] = React.useState(false);
+
+  React.useEffect(() => {
+    window.addEventListener('scroll', scrollOver(112, setOver))
+
+    return () => {
+      window.removeEventListener('scroll', scrollOver(112, setOver))
+    }
+  })
+
   return (
-    <nav className="nav">
+    <nav className={`nav${over ? ' over' : ''}`}>
       <a href="/" className="logo">
         {logo}
       </a>
