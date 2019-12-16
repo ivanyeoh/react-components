@@ -8,7 +8,7 @@ export default ({ items }) => (
           <figure>
             <img src={item.src} />
             <figcaption>
-              item.caption
+              {item.caption}
             </figcaption>
           </figure>
         </li>

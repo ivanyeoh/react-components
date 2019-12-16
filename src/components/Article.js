@@ -4,7 +4,7 @@ const RightFigureArticle = ({ title, children, figure, figcaption }) => (
   <Fragment>
     <h2>{title}</h2>
     <figure>
-      {children}
+      {figure}
       <figcaption>{figcaption}</figcaption>
     </figure>
 
@@ -12,14 +12,14 @@ const RightFigureArticle = ({ title, children, figure, figcaption }) => (
   </Fragment>
 )
 
-const SplitArticle = ({ title, children, figure }) => (
+const SplitArticle = ({ title, left, right }) => (
   <Fragment>
     <div className="left">
       <h2>{title}</h2>
-      {children}
+      {left}
     </div>
     <div className="right">
-      {figure}
+      {right}
     </div>
   </Fragment>
 )
