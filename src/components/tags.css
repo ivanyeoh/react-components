@@ -16,3 +16,14 @@
 .tags li:last-child {
   margin-right: 0;
 }
+
+
+@media (max-width: 767.98px) {
+  .tags {
+    font-size: .8rem;
+  }
+
+  .tags li {
+    margin: 1rem .25rem;
+  }
+}

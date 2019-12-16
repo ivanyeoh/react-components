@@ -55,3 +55,13 @@
 .hero .mark-list li:last-child {
   margin-right: 0;
 }
+
+@media (max-width: 767.98px) {
+  .hero {
+    max-height: 100vh;
+  }
+
+  .hero .mask {
+    max-height: 100vh;
+  }
+}
