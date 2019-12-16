@@ -1,0 +1,41 @@
+article img {
+  max-width: 100%;
+}
+
+article.dark,
+article.bright {
+  padding: 2rem;
+}
+
+article.dark {
+  background: #101010;
+  color: white;
+}
+
+article.bright {
+  background: rgb(245, 245, 245);
+  color: #101010;
+}
+
+article.right-figure figure {
+  float: right;
+  width: 50vw;
+  margin: 0 0 1rem 2rem;
+}
+
+article.right-figure figcaption {
+  display: none;
+}
+
+article.split {
+  display: flex;
+}
+article.split > div {
+  width: 50vw;
+}
+article.split > div.left {
+  padding-right: 2rem;
+}
+article.split > div.right {
+  align-self: center;
+}

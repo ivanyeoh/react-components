@@ -1,0 +1,17 @@
+.icon-grid {
+  list-style: none;
+  padding: 0;
+  margin: 3rem 0;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 5px;
+  text-align: center;
+  font-size: 1.2rem;
+  white-space: nowrap;
+}
+
+.icon-grid img {
+  width: 100px;
+  margin: 0 auto;
+}
