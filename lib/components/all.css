@@ -441,13 +441,15 @@ article.split > div.right {
 .slide h1 {
   animation: fadeOutUp .5s ease-in;
 }
-.slide p {
+.slide h1 + p,
+.slide h1 + div {
   animation: fadeOutDown .5s ease-in;
 }
 .slide.active h1 {
   animation: fadeInDown .5s ease-in;
 }
-.slide.active p {
+.slide.active h1 + p,
+.slide.active h1 + div {
   animation: fadeInUp .5s ease-in;
 }
 .slide.active .background {
