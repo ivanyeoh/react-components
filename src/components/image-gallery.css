@@ -23,6 +23,7 @@
 .image-gallery-item .image {
   overflow: hidden;
   font-size: 0;
+  height: 180px;
 }
 .image-gallery-item img {
   object-fit: cover;
