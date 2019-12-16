@@ -325,6 +325,9 @@ article.split > div.right {
 .nav .menu-toggle,
 .nav .menu-close {
   display: none;
+  align-items: center;
+  margin-left: auto;
+  padding: 0;
 }
 
 .nav .menu-toggle svg,
@@ -335,10 +338,7 @@ article.split > div.right {
 @media (max-width: 767.98px) {
   .nav .menu-toggle {
     display: flex;
-    align-items: center;
-    margin-left: auto;
     color: white;
-    padding: 0;
   }
 
   .nav .menu {
@@ -356,16 +356,37 @@ article.split > div.right {
     transition: background .3s, transform .3s;
   }
 
+  .nav .menu a {
+    color: #101010;
+  }
+
   .nav.expanded .menu-toggle {
     display: none;
   }
   .nav.expanded .menu-close {
-    display: block;
+    display: flex;
+    color: #101010;
   }
 
   .nav.expanded .menu {
     transform: translateX(0);
     background-color: rgba(255, 255, 255, 1);
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .nav.expanded .menu li {
+    justify-content: center;
+  }
+
+  .nav.expanded .menu a {
+    line-height: 4rem;
+  }
+  .nav.expanded .menu li.active:before {
+    width: 3rem;
+  }
+  .nav.expanded .menu li:before {
+    bottom: 25%;
   }
 }.scroll-down-arrow {
   width: 30px;
