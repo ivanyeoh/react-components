@@ -24,6 +24,17 @@ export default ({ logo, items = [] }) => {
     }
   })
 
+  let matchedItem = items.find(item => item.url === pathname)
+  if (!matchedItem) matchedItem = items.find(item => item.url.match(new RegExp(`^${pathname}`)))
+
+  const navItems = items.map((item, index) => {
+    return {
+      index,
+      ...item,
+      className: matchedItem === item ? 'active' : null
+    }
+  })
+
   return (
     <nav className={`nav${over ? ' over' : ''}`}>
       <a href="/" className="logo">
@@ -31,8 +42,8 @@ export default ({ logo, items = [] }) => {
       </a>
       <ul className="menu">
         {
-          items.map((item, index) => (
-            <li key={`nav-item-${index}`} className={pathname === item.url ? "active" : null}>
+          navItems.map(item => (
+            <li key={`nav-item-${item.index}`} className={item.className}>
               <a href={item.url}>{item.label}</a>
             </li>
           ))

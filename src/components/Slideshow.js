@@ -22,6 +22,20 @@ export const Slide = ({ id, title, description, cssBackgroundImage, activated })
   )
 }
 
+const Pagination = ({ childrenIds, activeSlideId, activateSlide }) => (
+  <nav className="pagination">
+    {
+      childrenIds.map((id, index) => (
+        <a href={`#${id}`}
+          key={id}
+          onClick={activateSlide(id)}
+          className={activeSlideId === id ? 'active' : null}
+        >{index + 1}</a>
+      ))
+    }
+  </nav>
+)
+
 export const Slideshow = memo(({ id = 'main', children }) => {
   const childrenIds = generateChildrenIds(id, children)
   const [activeSlideId, setActiveSlide] = useState(childrenIds[0])
@@ -40,17 +54,13 @@ export const Slideshow = memo(({ id = 'main', children }) => {
           activated: activeSlideId === childrenIds[index]
         }))
       }
-      <nav className="pagination">
-        {
-          childrenIds.map((id, index) => (
-            <a href={`#${id}`}
-              key={id}
-              onClick={activateSlide(id)}
-              className={activeSlideId === id ? 'active' : null}
-            >{index + 1}</a>
-          ))
-        }
-      </nav>
+      {
+        childrenIds.length ? <Pagination
+          childrenIds={childrenIds}
+          activeSlideId={activeSlideId}
+          activateSlide={activateSlide}
+        /> : null
+      }
     </section>
   )
 })
