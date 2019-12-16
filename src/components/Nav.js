@@ -29,7 +29,7 @@ export default ({ logo, items = [] }) => {
       <ul className="menu">
         {
           items.map((item, index) => (
-            <li key={`nav-item-${index}`} className={location.pathname === item.url ? "active" : null}>
+            <li key={`nav-item-${index}`} className={window.location.pathname === item.url ? "active" : null}>
               <a href={item.url}>{item.label}</a>
             </li>
           ))
