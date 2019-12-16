@@ -8,15 +8,19 @@ const generateChildrenIds = (id, children) => {
   return childrenIds
 }
 
-export const Slide = ({ id, title, description, bottomContent, cssBackgroundImage, activated }) => {
+export const Slide = ({ id, title, description, footer, cssBackgroundImage, activated }) => {
   return (
     <article className={`slide${activated ? ' active' : ''}`} id={id}>
       <div className="content">
         <h1>{title}</h1>
-        {description ? <p>{description}</p> : null}
-        {bottomContent ? bottomContent : null}
+        {description}
       </div>
 
+      {
+        footer ?
+        <div className="footer">{footer}</div> :
+        null
+      }
       <div className="background" style={{ backgroundImage: cssBackgroundImage }}></div>
       <div className="mask"></div>
     </article>
