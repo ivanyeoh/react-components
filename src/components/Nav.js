@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react'
 
+import MenuIcon from './icons/MenuIcon'
+import CloseIcon from './icons/CloseIcon'
+
 const scrollOver = (y, callback) => {
   return (a) => {
     if (document.documentElement.scrollTop > y) {
@@ -13,6 +16,7 @@ const scrollOver = (y, callback) => {
 export default ({ logo, items = [] }) => {
   const [over, setOver] = useState(false);
   const [pathname, setPathname] = useState(null);
+  const [expanded, setExpanded] = useState(false);
 
   useEffect(() => {
     setPathname(window.location.pathname);
@@ -36,7 +40,7 @@ export default ({ logo, items = [] }) => {
   })
 
   return (
-    <nav className={`nav${over ? ' over' : ''}`}>
+    <nav className={`nav${over ? ' over' : ''}${expanded ? ' expanded' : ''}`}>
       <a href="/" className="logo">
         {logo}
       </a>
@@ -49,6 +53,16 @@ export default ({ logo, items = [] }) => {
           ))
         }
       </ul>
+      <a className="menu-toggle" role="button" onClick={() => {
+        setExpanded(!expanded)
+      }}>
+        <MenuIcon />
+      </a>
+      <a className="menu-close" role="button" onClick={() => {
+        setExpanded(false)
+      }}>
+        <CloseIcon />
+      </a>
     </nav>
   )
 }
