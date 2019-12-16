@@ -373,6 +373,7 @@ article.split > div.right {
   align-items: center;
   justify-content: center;
   z-index: 0;
+  overflow: hidden;
 }
 
 .slide:target,
