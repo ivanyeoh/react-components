@@ -1,12 +1,14 @@
+import React, { useState, useEffect } from 'react'
+
 const bladesAnimationDuration = 500 + 1
 
 export default () => {
-  const [animationClass, setAnimationClass] = React.useState({
+  const [animationClass, setAnimationClass] = useState({
     blades: 'goodWindSpinRight',
   })
-  const [hover, setHover] = React.useState(false)
+  const [hover, setHover] = useState(false)
 
-  React.useEffect(() => {
+  useEffect(() => {
     const animationTimer = setTimeout(() => {
       setAnimationClass({
         blades: null

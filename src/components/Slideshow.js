@@ -1,3 +1,4 @@
+import React from 'react'
 import { getUrlHash } from '../utils/url.js'
 
 const { useState, cloneElement, Children, memo } = React

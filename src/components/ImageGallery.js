@@ -1,4 +1,4 @@
-const { useState, cloneElement, Children, memo } = React
+import React, { cloneElement, Children } from 'react'
 
 export const Image = ({ title, description, imageUrl, link }) => {
   return (

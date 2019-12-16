@@ -1,3 +1,5 @@
+import React, { useState, useEffect } from 'react'
+
 const scrollOver = (y, callback) => {
   return (a) => {
     if (document.documentElement.scrollTop > y) {
@@ -9,9 +11,9 @@ const scrollOver = (y, callback) => {
 }
 
 export default ({ logo, items = [] }) => {
-  const [over, setOver] = React.useState(false);
+  const [over, setOver] = useState(false);
 
-  React.useEffect(() => {
+  useEffect(() => {
     window.addEventListener('scroll', scrollOver(112, setOver))
 
     return () => {

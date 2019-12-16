@@ -2,7 +2,7 @@
   "name": "react-components",
   "version": "1.0.0",
   "description": "React components",
-  "main": "index.js",
+  "main": "./lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "./node_modules/.bin/babel --watch src --out-dir lib",
@@ -10,10 +10,12 @@
   },
   "author": "Ivan Yeoh",
   "license": "ISC",
+  "peerDependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
   "dependencies": {
-    "@babel/polyfill": "^7.6.0",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2"
+    "@babel/polyfill": "^7.6.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.6.2",
