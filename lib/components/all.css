@@ -44,6 +44,22 @@ article.split > div.left {
 }
 article.split > div.right {
   align-self: center;
+}
+
+@media (max-width: 767.98px) {
+  article.right-figure figure {
+    float: none;
+    width: auto;
+    margin: 0;
+  }
+
+  article.split {
+    flex-direction: column;
+  }
+
+  article.split > div {
+    width: auto;
+  }
 }.hero {
   padding-top: 120px;
   padding-left: 2rem;
@@ -670,5 +686,6 @@ article.split > div.right {
 
   .tags li {
     margin: 1rem .25rem;
+    padding: .5rem .75rem;
   }
 }

@@ -45,3 +45,19 @@ article.split > div.left {
 article.split > div.right {
   align-self: center;
 }
+
+@media (max-width: 767.98px) {
+  article.right-figure figure {
+    float: none;
+    width: auto;
+    margin: 0;
+  }
+
+  article.split {
+    flex-direction: column;
+  }
+
+  article.split > div {
+    width: auto;
+  }
+}
