@@ -100,6 +100,16 @@ article.split > div.right {
 }
 .hero .mark-list li:last-child {
   margin-right: 0;
+}
+
+@media (max-width: 767.98px) {
+  .hero {
+    max-height: 100vh;
+  }
+
+  .hero .mask {
+    max-height: 100vh;
+  }
 }.icon-grid {
   list-style: none;
   padding: 0;
@@ -116,6 +126,12 @@ article.split > div.right {
 .icon-grid img {
   width: 100px;
   margin: 0 auto;
+}
+
+@media (max-width: 767.98px) {
+  .icon-grid {
+    font-size: 1rem;
+  }
 }.image-gallery-item {
   font-size: 0.8rem;
 }
@@ -644,4 +660,15 @@ article.split > div.right {
 }
 .tags li:last-child {
   margin-right: 0;
+}
+
+
+@media (max-width: 767.98px) {
+  .tags {
+    font-size: .8rem;
+  }
+
+  .tags li {
+    margin: 1rem .25rem;
+  }
 }
