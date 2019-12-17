@@ -16,9 +16,10 @@ export const Image = ({ title, description, imageUrl, link }) => {
   )
 }
 
-export const ImageGallery = ({ children }) => {
+export const ImageGallery = ({ title, children }) => {
   return (
     <section className="image-gallery">
+      {title ? title : null}
       <ul>
       {
         Children.map(children, (child, index) => (
