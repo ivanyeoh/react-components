@@ -656,3 +656,9 @@ article.split > div.right {
     padding: .5rem .75rem;
   }
 }
+
+@media (max-width: 320px) {
+  .tags {
+    font-size: .7rem;
+  }
+}
