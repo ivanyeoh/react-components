@@ -635,11 +635,8 @@ article.split > div.right {
 }
 
 @media (max-width: 767.98px) {
-  .slide h1 {
-    padding: 0 1rem;
-  }
-
   .slide .content {
+    padding: 0 1rem;
     position: absolute;
     bottom: 0;
   }
