@@ -65,3 +65,11 @@ article.split > div.right {
     width: auto;
   }
 }
+
+@media (max-width: 320px) {
+  article.dark,
+  article.neutral,
+  article.bright {
+    padding: 2rem 1rem;
+  }
+}

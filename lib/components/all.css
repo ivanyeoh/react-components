@@ -64,6 +64,14 @@ article.split > div.right {
   article.split > div {
     width: auto;
   }
+}
+
+@media (max-width: 320px) {
+  article.dark,
+  article.neutral,
+  article.bright {
+    padding: 2rem 1rem;
+  }
 }.hero {
   padding-top: 120px;
   padding-left: 2rem;
