@@ -53,6 +53,10 @@ article.split > div.right {
     margin: 0;
   }
 
+  article.split > div.left {
+    padding-right: 0;
+  }
+
   article.split {
     flex-direction: column;
   }

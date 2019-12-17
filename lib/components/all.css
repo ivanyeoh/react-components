@@ -53,6 +53,10 @@ article.split > div.right {
     margin: 0;
   }
 
+  article.split > div.left {
+    padding-right: 0;
+  }
+
   article.split {
     flex-direction: column;
   }
@@ -658,6 +662,17 @@ article.split > div.right {
   }
   100% {
     background: rgba(0, 0, 0, .7);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .slide h1 {
+    padding: 0 1rem;
+  }
+
+  .slide .content {
+    position: absolute;
+    bottom: 0;
   }
 }.tags {
   list-style: none;
