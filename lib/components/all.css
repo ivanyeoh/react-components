@@ -535,7 +535,7 @@ article.split > div.right {
 .slides .footer {
   position: absolute;
   width: 100%;
-  bottom: 0;
+  bottom: 3rem;
   left: 0;
   z-index: 50;
 }
@@ -644,7 +644,7 @@ article.split > div.right {
   .slide .content {
     padding: 0 1rem;
     position: absolute;
-    bottom: 0;
+    bottom: 2rem;
   }
 }.tags {
   list-style: none;
