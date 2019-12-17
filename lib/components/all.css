@@ -130,6 +130,14 @@ article.split > div.right {
   .hero .mask {
     max-height: 100vh;
   }
+}
+
+@media (max-width: 320px) {
+  .hero,
+  .hero .content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }.icon-grid {
   list-style: none;
   padding: 0;
