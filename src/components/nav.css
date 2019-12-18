@@ -106,6 +106,9 @@
     box-sizing: border-box;
     color: #101010;
     transition: transform .3s;
+    background-color: rgba(245, 245, 245, 1);
+    flex-direction: column;
+    justify-content: center;
   }
 
   .nav .menu a {
@@ -123,9 +126,6 @@
 
   .nav.expanded .menu {
     transform: translateX(0);
-    background-color: rgba(245, 245, 245, 1);
-    flex-direction: column;
-    justify-content: center;
   }
 
   .nav.expanded .menu li {
