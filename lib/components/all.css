@@ -371,6 +371,11 @@ article.split > div.right {
 
   .nav .menu a {
     color: #101010;
+    line-height: 6rem;
+  }
+
+  .nav .menu li {
+    justify-content: center;
   }
 
   .nav.expanded .menu-toggle {
@@ -386,13 +391,6 @@ article.split > div.right {
     transform: translateX(0);
   }
 
-  .nav.expanded .menu li {
-    justify-content: center;
-  }
-
-  .nav.expanded .menu a {
-    line-height: 4rem;
-  }
   .nav.expanded .menu a:hover {
     color: rgba(0, 0, 0, 0.5);
   }
