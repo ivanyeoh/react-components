@@ -362,9 +362,8 @@ article.split > div.right {
     padding: 2rem;
     text-align: center;
     box-sizing: border-box;
-    background-color: rgba(0, 0, 0, .8);
     color: #101010;
-    transition: background .3s, transform .3s;
+    transition: transform .3s;
   }
 
   .nav .menu a {
