@@ -5,7 +5,9 @@ import CloseIcon from './icons/CloseIcon'
 
 const scrollOver = (y, callback) => {
   return (a) => {
-    if (document.documentElement.scrollTop > y) {
+    const doc = document.documentElement
+    const top = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0)
+    if (top > y) {
       callback(true)
     } else {
       callback(false)
