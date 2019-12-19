@@ -9,10 +9,10 @@ export default class InViewMonitor extends Component {
     super(props)
 
     this._monitorChildNode = {}
-    this.observeAll.bind(this)
-    this.unobserveAll.bind(this)
-    this.onIntersectionAll.bind(this)
-    this.onIntersectionEach.bind(this)
+    this.observeAll = this.observeAll.bind(this)
+    this.unobserveAll = this.unobserveAll.bind(this)
+    this.onIntersectionAll = this.onIntersectionAll.bind(this)
+    this.onIntersectionEach = this.onIntersectionEach.bind(this)
     this.state = {
       intersecting: {}
     }
