@@ -21,7 +21,7 @@ export default class InViewMonitor extends Component {
   componentDidMount() {
     this.observer = new window.IntersectionObserver(
       this.onIntersectionAll,
-      { threshold: 0.25 }
+      { threshold: this.props.threshold || 0 }
     )
 
     this.observeAll()
