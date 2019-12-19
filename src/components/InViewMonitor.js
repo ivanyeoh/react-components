@@ -5,7 +5,6 @@ function getKeyByValue(object, value) {
 }
 
 export default class InViewMonitor extends Component {
-
   constructor(props) {
     super(props)
 
