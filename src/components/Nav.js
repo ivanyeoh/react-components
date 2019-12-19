@@ -4,6 +4,7 @@ import MenuIcon from './icons/MenuIcon'
 import CloseIcon from './icons/CloseIcon'
 
 const scrollOver = (y, callback) => {
+  console.log('scrolling...');
   return (a) => {
     const doc = document.documentElement
     const top = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0)
