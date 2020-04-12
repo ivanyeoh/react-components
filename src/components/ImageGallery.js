@@ -16,9 +16,9 @@ export const Image = ({ title, description, imageUrl, link }) => {
   )
 }
 
-export const ImageGallery = ({ title, children }) => {
+export const ImageGallery = ({ title, children, className = '' }) => {
   return (
-    <section className="image-gallery">
+    <section className={`image-gallery ${className}`}>
       {title ? title : null}
       <ul>
       {
