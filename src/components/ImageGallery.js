@@ -5,7 +5,7 @@ export const Image = ({ title, description, imageUrl, link }) => {
     <a href={link}>
       <figure>
         <div className="image">
-          <img src={imageUrl} />
+          <img src={imageUrl} loading="lazy" />
         </div>
         <figcaption>
           <strong>{title}</strong>
